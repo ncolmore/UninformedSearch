@@ -152,6 +152,7 @@ public class solver {
         ArrayList<node> open = new ArrayList<>();
         open.add(puzzleToSolve);
         graph.add(puzzleToSolve);
+        puzzleToSolve.expand(puzzleToSolve,puzzleToSolve.state);
         while (open.size() != 0 && goalReached == false) {
             node1 = new node(open.get(0));
             closed.add(node1);
@@ -166,6 +167,7 @@ public class solver {
 
         }
         return node1;
+
     }
     static void solveByH2(ArrayList<node> puzzleToSolve){
 

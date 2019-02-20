@@ -20,6 +20,34 @@ hManhattan + gVal= 7
 1 6 5
 
 
+Node 2
+hManhattan + gVal= 7
+2 0 3
+7 8 4
+1 6 5
+
+
+Node 3
+hManhattan + gVal= 7
+7 2 3
+0 8 4
+1 6 5
+
+
+Node 4
+hManhattan + gVal= 7
+2 0 3
+7 8 4
+1 6 5
+
+
+Node 5
+hManhattan + gVal= 7
+7 2 3
+0 8 4
+1 6 5
+
+
 Problem 2
 Original Position
 
@@ -36,6 +64,34 @@ hManhattan + gVal= 13
 
 
 Node 1
+hManhattan + gVal= 13
+5 2 3
+8 7 4
+6 0 1
+
+
+Node 2
+hManhattan + gVal= 13
+5 2 3
+0 7 4
+8 6 1
+
+
+Node 3
+hManhattan + gVal= 13
+5 2 3
+8 7 4
+6 0 1
+
+
+Node 4
+hManhattan + gVal= 13
+5 2 3
+0 7 4
+8 6 1
+
+
+Node 5
 hManhattan + gVal= 13
 5 2 3
 8 7 4
@@ -71,6 +127,48 @@ hManhattan + gVal= 17
 0 8 1
 
 
+Node 3
+hManhattan + gVal= 15
+2 3 4
+5 6 7
+8 1 0
+
+
+Node 4
+hManhattan + gVal= 13
+2 3 4
+5 0 7
+8 6 1
+
+
+Node 5
+hManhattan + gVal= 17
+2 3 4
+5 6 7
+0 8 1
+
+
+Node 6
+hManhattan + gVal= 15
+2 3 4
+5 6 7
+8 1 0
+
+
+Node 7
+hManhattan + gVal= 13
+2 3 4
+5 0 7
+8 6 1
+
+
+Node 8
+hManhattan + gVal= 17
+2 3 4
+5 6 7
+0 8 1
+
+
 Problem 4
 Original Position
 
@@ -87,6 +185,34 @@ hManhattan + gVal= 19
 
 
 Node 1
+hManhattan + gVal= 19
+3 4 5
+6 7 8
+1 0 2
+
+
+Node 2
+hManhattan + gVal= 19
+3 4 5
+0 7 8
+6 1 2
+
+
+Node 3
+hManhattan + gVal= 19
+3 4 5
+6 7 8
+1 0 2
+
+
+Node 4
+hManhattan + gVal= 19
+3 4 5
+0 7 8
+6 1 2
+
+
+Node 5
 hManhattan + gVal= 19
 3 4 5
 6 7 8
@@ -119,6 +245,48 @@ Node 2
 hManhattan + gVal= 19
 4 5 0
 7 8 6
+1 2 3
+
+
+Node 3
+hManhattan + gVal= 19
+4 5 6
+7 8 3
+1 2 0
+
+
+Node 4
+hManhattan + gVal= 19
+4 5 0
+7 8 6
+1 2 3
+
+
+Node 5
+hManhattan + gVal= 19
+4 5 6
+7 0 8
+1 2 3
+
+
+Node 6
+hManhattan + gVal= 19
+4 5 6
+7 8 3
+1 2 0
+
+
+Node 7
+hManhattan + gVal= 19
+4 5 0
+7 8 6
+1 2 3
+
+
+Node 8
+hManhattan + gVal= 19
+4 5 6
+7 0 8
 1 2 3
 
 
