@@ -7,41 +7,13 @@ Original Position
 
 Sorted List
 Node 0
-# Diplaced Tiles + gVal= 5
-7 2 3
-0 8 4
+# Diplaced Tiles + gVal= 6
+2 0 3
+7 8 4
 1 6 5
 
 
 Node 1
-# Diplaced Tiles + gVal= 6
-2 0 3
-7 8 4
-1 6 5
-
-
-Node 2
-# Diplaced Tiles + gVal= 6
-2 0 3
-7 8 4
-1 6 5
-
-
-Node 3
-# Diplaced Tiles + gVal= 5
-7 2 3
-0 8 4
-1 6 5
-
-
-Node 4
-# Diplaced Tiles + gVal= 6
-2 0 3
-7 8 4
-1 6 5
-
-
-Node 5
 # Diplaced Tiles + gVal= 5
 7 2 3
 0 8 4
@@ -70,34 +42,6 @@ Node 1
 6 0 1
 
 
-Node 2
-# Diplaced Tiles + gVal= 6
-5 2 3
-0 7 4
-8 6 1
-
-
-Node 3
-# Diplaced Tiles + gVal= 6
-5 2 3
-8 7 4
-6 0 1
-
-
-Node 4
-# Diplaced Tiles + gVal= 6
-5 2 3
-0 7 4
-8 6 1
-
-
-Node 5
-# Diplaced Tiles + gVal= 6
-5 2 3
-8 7 4
-6 0 1
-
-
 Problem 3
 Original Position
 
@@ -107,62 +51,20 @@ Original Position
 
 Sorted List
 Node 0
-# Diplaced Tiles + gVal= 8
+# Diplaced Tiles + gVal= 10
 2 3 4
-5 0 7
-8 6 1
+5 6 7
+8 1 0
 
 
 Node 1
-# Diplaced Tiles + gVal= 10
+# Diplaced Tiles + gVal= 8
 2 3 4
-5 6 7
-8 1 0
+5 0 7
+8 6 1
 
 
 Node 2
-# Diplaced Tiles + gVal= 10
-2 3 4
-5 6 7
-0 8 1
-
-
-Node 3
-# Diplaced Tiles + gVal= 10
-2 3 4
-5 6 7
-8 1 0
-
-
-Node 4
-# Diplaced Tiles + gVal= 8
-2 3 4
-5 0 7
-8 6 1
-
-
-Node 5
-# Diplaced Tiles + gVal= 10
-2 3 4
-5 6 7
-0 8 1
-
-
-Node 6
-# Diplaced Tiles + gVal= 10
-2 3 4
-5 6 7
-8 1 0
-
-
-Node 7
-# Diplaced Tiles + gVal= 8
-2 3 4
-5 0 7
-8 6 1
-
-
-Node 8
 # Diplaced Tiles + gVal= 10
 2 3 4
 5 6 7
@@ -191,34 +93,6 @@ Node 1
 1 0 2
 
 
-Node 2
-# Diplaced Tiles + gVal= 10
-3 4 5
-0 7 8
-6 1 2
-
-
-Node 3
-# Diplaced Tiles + gVal= 10
-3 4 5
-6 7 8
-1 0 2
-
-
-Node 4
-# Diplaced Tiles + gVal= 10
-3 4 5
-0 7 8
-6 1 2
-
-
-Node 5
-# Diplaced Tiles + gVal= 10
-3 4 5
-6 7 8
-1 0 2
-
-
 Problem 5
 Original Position
 
@@ -228,62 +102,20 @@ Original Position
 
 Sorted List
 Node 0
-# Diplaced Tiles + gVal= 9
+# Diplaced Tiles + gVal= 10
 4 5 6
-7 0 8
-1 2 3
+7 8 3
+1 2 0
 
 
 Node 1
 # Diplaced Tiles + gVal= 10
-4 5 6
-7 8 3
-1 2 0
+4 5 0
+7 8 6
+1 2 3
 
 
 Node 2
-# Diplaced Tiles + gVal= 10
-4 5 0
-7 8 6
-1 2 3
-
-
-Node 3
-# Diplaced Tiles + gVal= 10
-4 5 6
-7 8 3
-1 2 0
-
-
-Node 4
-# Diplaced Tiles + gVal= 10
-4 5 0
-7 8 6
-1 2 3
-
-
-Node 5
-# Diplaced Tiles + gVal= 9
-4 5 6
-7 0 8
-1 2 3
-
-
-Node 6
-# Diplaced Tiles + gVal= 10
-4 5 6
-7 8 3
-1 2 0
-
-
-Node 7
-# Diplaced Tiles + gVal= 10
-4 5 0
-7 8 6
-1 2 3
-
-
-Node 8
 # Diplaced Tiles + gVal= 9
 4 5 6
 7 0 8

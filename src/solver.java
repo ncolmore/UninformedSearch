@@ -16,7 +16,7 @@ public class solver {
         }
         File file = new File("src/input.txt");
         Scanner read = new Scanner(file);
-        read.useDelimiter(",|\r\n");
+        read.useDelimiter(",|\r\n|\n");
         int i = 0;
         int array = 0;
         while (read.hasNext()) {
@@ -28,7 +28,7 @@ public class solver {
         }
         for(i=0;i<5;i++){
             node node1=new node(puzzlesToSolve.get(i));
-            node1.expand(node1,puzzlesToSolve.get(i)); //expand first node
+            //node1.expand(node1,puzzlesToSolve.get(i)); //expand first node
             //TODO add solve puzzle function here
             expandedNodes.add(node1);
             sortNodesHemming(node1.children);
@@ -148,26 +148,37 @@ public class solver {
         boolean goalReached = false;
         ArrayList<node> expandedNodes=new ArrayList<>();
         node node1 = new node();
+        node correctParent;
         ArrayList<node> graph = new ArrayList<>();
         ArrayList<node> closed = new ArrayList<>();
         ArrayList<node> open = new ArrayList<>();
         open.add(puzzleToSolve);
         graph.add(puzzleToSolve);
         while (open.size() != 0 && goalReached == false) {
-            node1 = open.get(0);
-            closed.add(node1);
+            node1 = new node(open.get(0));
+            correctParent=open.get(0);
+            if(!checkClosed(correctParent,closed)) {
+                closed.add(correctParent);
+            }
             open.remove(0);
             goalReached = node1.equalstate();
             if (goalReached == true) {
                 return node1;
 
             }
-            node1.expand(node1, node1.state);
+            node1.expand(correctParent, node1.state);
             for(int i=0;i<node1.children.size();i++){
-                node tempNode=new node(node1.children.get(i));
-               int index=graph.indexOf(tempNode.parent);
-               graph.get(index).children.add(tempNode);
+                node tempNode=node1.children.get(i);
+               int index=closed.indexOf(tempNode.parent);
+
+                    closed.get(index).addChildren(tempNode);
+
+                if(!checkOpen(tempNode,open)) {
+                    open.add(node1.children.get(i));
+                }
             }
+
+            sortNodesHemming(open);
             System.out.println();
 
         }
@@ -179,6 +190,25 @@ public class solver {
     }
     static void solveByH3(ArrayList<node> puzzleToSolve){
 
+    }
+
+    static boolean checkClosed(node n1, ArrayList<node> closed)
+    {
+        for(int i=0;i<closed.size();i++){
+            if(n1.state.equals(closed.get(i).state)){
+                return true; //exists
+            }
+        }
+        return false;
+    }
+    static boolean checkOpen(node n1, ArrayList<node> open)
+    {
+        for(int i=0;i<open.size();i++){
+            if(n1.state.equals(open.get(i).state)){
+                return true; //exists
+            }
+        }
+        return false;
     }
 
 }

@@ -1,4 +1,4 @@
-import javafx.util.Pair;
+
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -60,46 +60,46 @@ public class node {
         int position = prevState.indexOf(0);
         switch (position) {
             case 0://0 located in first position, can go down,right
-                moveRight(prevState, position);
-                moveDown(prevState, position);
+                moveRight(prevState, position,parent);
+                moveDown(prevState, position,parent);
                 break;
             case 1://0 located in second position, can go down,right,left
-                moveDown(prevState, position);
-                moveLeft(prevState, position);
-                moveRight(prevState, position);
+                moveDown(prevState, position,parent);
+                moveLeft(prevState, position,parent);
+                moveRight(prevState, position,parent);
                 break;
             case 2://0 located in third position, can go down,left
-                moveDown(prevState, position);
-                moveLeft(prevState, position);
+                moveDown(prevState, position,parent);
+                moveLeft(prevState, position,parent);
                 break;
             case 3://0 located in fourth position, can go down,right,up
-                moveDown(prevState, position);
-                moveRight(prevState, position);
-                moveUp(prevState, position);
+                moveDown(prevState, position,parent);
+                moveRight(prevState, position,parent);
+                moveUp(prevState, position,parent);
                 break;
             case 4://0 located in fourth position, can go down,right,up
-                moveDown(prevState, position);
-                moveRight(prevState, position);
-                moveUp(prevState, position);
-                moveLeft(prevState, position);
+                moveDown(prevState, position,parent);
+                moveRight(prevState, position,parent);
+                moveUp(prevState, position,parent);
+                moveLeft(prevState, position,parent);
                 break;
             case 5://0 located in fourth position, can go down,right,up
-                moveDown(prevState, position);
-                moveUp(prevState, position);
-                moveLeft(prevState, position);
+                moveDown(prevState, position,parent);
+                moveUp(prevState, position,parent);
+                moveLeft(prevState, position,parent);
                 break;
             case 6://0 located in fourth position, can go down,right,up
-                moveUp(prevState, position);
-                moveRight(prevState, position);
+                moveUp(prevState, position,parent);
+                moveRight(prevState, position,parent);
                 break;
             case 7://0 located in fourth position, can go down,right,up
-                moveRight(prevState, position);
-                moveUp(prevState, position);
-                moveLeft(prevState, position);
+                moveRight(prevState, position,parent);
+                moveUp(prevState, position,parent);
+                moveLeft(prevState, position,parent);
                 break;
             case 8://0 located in fourth position, can go down,right,up
-                moveUp(prevState, position);
-                moveLeft(prevState, position);
+                moveUp(prevState, position,parent);
+                moveLeft(prevState, position,parent);
                 break;
         }
     }
@@ -119,13 +119,13 @@ public class node {
         return tempList;
     }
 
-    void moveLeft(ArrayList<Integer> prevVal, int index) {
+    void moveLeft(ArrayList<Integer> prevVal, int index,node cp) {
         node tempNode = new node();
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index - 1);
         tempNode.state = tempState;
         node temp;
-        tempNode.parent = this;
+        tempNode.parent = cp;
         tempNode.parentAction = 4;
         tempNode.gVal=tempNode.gVal+1;
         hamming(tempNode);
@@ -135,12 +135,12 @@ public class node {
         return;
     }
 
-    void moveRight(ArrayList<Integer> prevVal, int index) {
+    void moveRight(ArrayList<Integer> prevVal, int index, node cp) {
         node tempNode = new node();
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index + 1);
         tempNode.state = tempState;
-        tempNode.parent = this;
+        tempNode.parent = cp;
         tempNode.parentAction = 2;
         tempNode.gVal=tempNode.gVal+1;
         hamming(tempNode);
@@ -150,12 +150,12 @@ public class node {
         return;
     }
 
-    void moveUp(ArrayList<Integer> prevVal, int index) {
+    void moveUp(ArrayList<Integer> prevVal, int index, node cp) {
         node tempNode = new node();
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index - 3);
         tempNode.state = tempState;
-        tempNode.parent = this;
+        tempNode.parent = cp;
         tempNode.parentAction = 1;
         tempNode.gVal=tempNode.gVal+1;
         hamming(tempNode);
@@ -165,12 +165,12 @@ public class node {
         return;
     }
 
-    void moveDown(ArrayList<Integer> prevVal, int index) {
+    void moveDown(ArrayList<Integer> prevVal, int index,node cp) {
         node tempNode = new node();
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index + 3);
         tempNode.state = tempState;
-        tempNode.parent = this;
+        tempNode.parent = cp;
         tempNode.parentAction = 3;
         tempNode.gVal=tempNode.gVal+1;
         hamming(tempNode);
@@ -305,6 +305,10 @@ public class node {
 
     public void setChildren(ArrayList<node> children) {
         this.children = children;
+    }
+    public void addChildren(node children1) {
+        children1.parent=this;
+        children.add(children1);
     }
 
     public ArrayList<Integer> getGoal() {
