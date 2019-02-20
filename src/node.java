@@ -34,7 +34,7 @@ public class node {
         children = new ArrayList<>();
     }
     public node(node n1) {
-        state=n1.state;
+        state=new ArrayList<>(n1.state);
         parent=n1.parent;
         parentAction=n1.parentAction;
         gVal=n1.gVal;
@@ -43,7 +43,7 @@ public class node {
         gPlusManhattan=n1.gPlusManhattan;
         gPlusHemming=n1.gPlusHemming;
         hemmingPlusManhattan=n1.hemmingPlusManhattan;
-        children=n1.children;
+        children=new ArrayList<>(n1.children);
         goal=n1.goal;
     }
     public node(ArrayList<Integer> state) {

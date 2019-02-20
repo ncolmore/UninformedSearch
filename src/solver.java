@@ -146,15 +146,15 @@ public class solver {
 
     static node solveByH1(node puzzleToSolve) {
         boolean goalReached = false;
+        ArrayList<node> expandedNodes=new ArrayList<>();
         node node1 = new node();
         ArrayList<node> graph = new ArrayList<>();
         ArrayList<node> closed = new ArrayList<>();
         ArrayList<node> open = new ArrayList<>();
         open.add(puzzleToSolve);
         graph.add(puzzleToSolve);
-        puzzleToSolve.expand(puzzleToSolve,puzzleToSolve.state);
         while (open.size() != 0 && goalReached == false) {
-            node1 = new node(open.get(0));
+            node1 = open.get(0);
             closed.add(node1);
             open.remove(0);
             goalReached = node1.equalstate();
@@ -162,7 +162,12 @@ public class solver {
                 return node1;
 
             }
-            node1.expand(node1.getParent(), node1.state);
+            node1.expand(node1, node1.state);
+            for(int i=0;i<node1.children.size();i++){
+                node tempNode=new node(node1.children.get(i));
+               int index=graph.indexOf(tempNode.parent);
+               graph.get(index).children.add(tempNode);
+            }
             System.out.println();
 
         }
