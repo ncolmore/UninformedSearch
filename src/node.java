@@ -121,6 +121,7 @@ public class node {
 
     void moveLeft(ArrayList<Integer> prevVal, int index,node cp) {
         node tempNode = new node();
+        tempNode.gVal=cp.gVal;
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index - 1);
         tempNode.state = tempState;
@@ -137,6 +138,7 @@ public class node {
 
     void moveRight(ArrayList<Integer> prevVal, int index, node cp) {
         node tempNode = new node();
+        tempNode.gVal=cp.gVal;
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index + 1);
         tempNode.state = tempState;
@@ -152,6 +154,7 @@ public class node {
 
     void moveUp(ArrayList<Integer> prevVal, int index, node cp) {
         node tempNode = new node();
+        tempNode.gVal=cp.gVal;
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index - 3);
         tempNode.state = tempState;
@@ -167,6 +170,7 @@ public class node {
 
     void moveDown(ArrayList<Integer> prevVal, int index,node cp) {
         node tempNode = new node();
+        tempNode.gVal=cp.gVal;
         ArrayList<Integer> tempState = createArray(prevVal);
         tempState = swapValues(tempState, index, index + 3);
         tempNode.state = tempState;
